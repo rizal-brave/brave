@@ -1,0 +1,38 @@
+name: Deploy SCSS to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Change this to your main branch name
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install Dependencies
+        run: npm install # or yarn install
+
+      - name: Build SCSS
+        run: npm run build-scss # Replace with your build command
+
+      - name: Deploy to GitHub Pages
+        run: |
+          mkdir -p docs # Create a folder to hold the compiled assets
+          cp -R your-source-folder/* docs/your-destination-folder
+          cp index.html docs/ # Copy any other necessary files
+        # The above commands build SCSS, copy files, and prepare the deployment folder.
+
+      - name: Push to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs # This should match the folder you copied files to
