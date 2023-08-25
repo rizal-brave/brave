@@ -1,0 +1,25 @@
+@media (min-width: 2561px) {
+	html {
+		font-size: 0.85vw;
+	}
+}
+
+/* ++++++++++++++ VARIABLES  ++++++++++++++ */
+:root {
+	--black: #000000;
+	--white: #ffffff;
+	--red: #e0300e;
+	--gray: #707070;
+	--gray-light: #ccc;
+	--font-primary: "Inter", Sans-serif;
+	--font-secondary: "Merriweather", Sans-serif;
+	--font-large: calc(20rem / 16);
+	--font-default: calc(16rem / 16);
+	--font-small: calc(14rem / 16);
+	--font-tiny: calc(12rem / 16);
+	--container-default: calc(1260rem / 16);
+	--container-narrow: calc(1050rem / 16);
+	--drop-shadow--small: 0px 2px 5px rgba(182, 53, 23, 0.08);
+	--drop-shadow--medium: 0px 5px 10px rgba(182, 53, 23, 0.1);
+	--drop-shadow--large: 0px 16px 24px rgba(182, 53, 23, 0.2);
+}

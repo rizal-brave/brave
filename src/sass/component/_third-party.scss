@@ -1,0 +1,67 @@
+body {
+	&#pojo-a11y-toolbar {
+		&.pojo-a11y-toolbar-right {
+			right: calc(-180rem / 16);
+
+			.pojo-a11y-toolbar-toggle {
+				right: calc(180rem / 16);
+			}
+		}
+
+		.pojo-a11y-toolbar-toggle {
+			a {
+				padding: 0.625rem;
+
+				&,
+				&:focus {
+					-webkit-transition: all 0.3s ease;
+					-o-transition: all 0.3s ease;
+					transition: all 0.3s ease;
+					box-shadow: -5px 5px 15px 0px rgba(0, 0, 0, 0.1);
+					-webkit-box-shadow: -5px 5px 15px 0px rgba(0, 0, 0, 0.1);
+				}
+
+				&:hover {
+					background-color: black;
+					color: white;
+				}
+			}
+		}
+
+		.pojo-a11y-toolbar-overlay {
+			box-shadow: var(--drop-shadow--medium);
+			width: calc(180rem / 16);
+
+			ul.pojo-a11y-toolbar-items {
+				padding: 0.625rem 0;
+
+				li.pojo-a11y-toolbar-item a {
+					padding: 0.625rem 0.9375rem;
+					text-decoration: none;
+
+					svg {
+						padding-right: 0.375rem;
+					}
+				}
+			}
+		}
+	}
+
+	&.pojo-a11y-grayscale,
+	&.pojo-a11y-negative-contrast {
+		.header svg path {
+			fill: yellow;
+		}
+	}
+
+	&.pojo-a11y-high-contrast .header svg path {
+		fill: #00ffff;
+	}
+
+	&.pojo-a11y-negative-contrast,
+	&.pojo-a11y-high-contrast {
+		#main a.clickable-area-link {
+			background: transparent !important;
+		}
+	}
+}

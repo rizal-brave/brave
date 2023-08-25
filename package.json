@@ -4,7 +4,7 @@
   "description": "Static page template, used to build single html file as output.",
   "main": "index.html",
   "scripts": {
-    "build-scss": "node-sass /src/scss/styles.scss /src/css/styles.css"
+    "build-scss": "node-sass src/sass/styles.scss src/css/styles.css"
   },
   "dependencies": {
     "@babel/core": "7.14.0",
